@@ -4,30 +4,29 @@ import { Button, Form, Grid, Header, Image, Message, Segment, Icon} from 'semant
 
 
 
-class Subs extends React.Component{
-  constructor(){
-    super();
-     this.state={log:''}
-     this.update=this.update.bind(this)
+class Subs extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      log: ''
+    }
   }
-
-update(e){
-  this.setState({
-    log:e.target.value
-  })
-handleClick = () => this.update()
-
+  update(e) {
+    console.log(e);
+    this.setState({
+      log:e.target.value
+    })
+  }
   render(){
     return (
   <div className='sub'>
-
     <style>{`
       body > div,
       body > div > div,
       body > div > div > div.login-form {
         height: 100%;
-      }
-    `}</style>
+      }`
+    }</style>
     <Grid
       textAlign='center'
       style={{ height: '100%' }}
@@ -59,4 +58,4 @@ handleClick = () => this.update()
 )
 }}
 ReactDOM.render(<Subs />,document.getElementById('root'))
-export default LoginForm
+export default Subs

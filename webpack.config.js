@@ -3,13 +3,13 @@ const webpack = require('webpack')
 
 module.exports = {
   // context means from where to start
-  context: path.resolve(__dirname, './src'),
+  context: path.resolve(__dirname),
   // entry point of the file
   entry: {
     app: './app.js',
   },
   output: {
-    path: path.resolve(__dirname, './dist'),
+    path: path.resolve(__dirname, 'dist'),
     filename: 'app.bundle.js'
   },
   resolve: {
