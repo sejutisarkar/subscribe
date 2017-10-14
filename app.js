@@ -10,9 +10,9 @@ class Subs extends React.Component {
     this.state = {
       log: ''
     }
+    this.handleClick = this.handleClick.bind(this)
   }
-  update(e) {
-    console.log(e);
+  handleClick(e) {
     this.setState({
       log:e.target.value
     })
@@ -43,6 +43,7 @@ class Subs extends React.Component {
               icon='mail'
               iconPosition='left'
               placeholder='E-mail address'
+              onChange={this.handleClick}
             />
             <Button animated ='fade' color='red' onClick={this.handleClick}>
      <Button.Content visible>Subscribe</Button.Content>

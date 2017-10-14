@@ -28757,13 +28757,13 @@ var Subs = function (_React$Component) {
     _this.state = {
       log: ''
     };
+    _this.handleClick = _this.handleClick.bind(_this);
     return _this;
   }
 
   _createClass(Subs, [{
-    key: 'update',
-    value: function update(e) {
-      console.log(e);
+    key: 'handleClick',
+    value: function handleClick(e) {
       this.setState({
         log: e.target.value
       });
@@ -28804,7 +28804,9 @@ var Subs = function (_React$Component) {
                   fluid: true,
                   icon: 'mail',
                   iconPosition: 'left',
-                  placeholder: 'E-mail address'
+                  placeholder: 'E-mail address',
+                  onChange: this.handleClick,
+                  defaultValue: this.state.log
                 }),
                 _react2.default.createElement(
                   _semanticUiReact.Button,
